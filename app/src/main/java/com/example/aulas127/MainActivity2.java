@@ -68,7 +68,7 @@ public class MainActivity2 extends AppCompatActivity {
                 return false;
             }
         });
-
+//
     }
 
     //fazer uma busca, atualizar o arraylist
