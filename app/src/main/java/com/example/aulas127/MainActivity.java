@@ -2,6 +2,7 @@ package com.example.aulas127;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -40,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
                                 "Senha digitada foi: " + senha,
                         Toast.LENGTH_SHORT
                 ).show();
+
+               Intent i = new Intent(
+                       MainActivity.this,
+                       MainActivity2.class
+               );
+
+               startActivity(i);
 
             }
         });
