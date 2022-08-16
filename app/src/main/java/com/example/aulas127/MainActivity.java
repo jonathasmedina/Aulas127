@@ -35,12 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("oncreate"," Usuario: " + usuario + ". " +
                         "Senha: " + senha);
 
-                Toast.makeText(
-                        getApplicationContext(),
-                        "Usuario informado foi: " + usuario + ". " +
-                                "Senha digitada foi: " + senha,
-                        Toast.LENGTH_SHORT
-                ).show();
+                //Toast.makeText(getApplicationContext(),"Usuario informado foi: " + usuario + ". " +"Senha digitada foi: " + senha,Toast.LENGTH_SHORT).show();
 
                Intent i = new Intent(
                        MainActivity.this,

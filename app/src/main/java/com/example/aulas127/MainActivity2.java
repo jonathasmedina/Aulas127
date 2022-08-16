@@ -2,8 +2,10 @@ package com.example.aulas127;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -14,6 +16,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     SearchView searchView;
     ListView listView;
+    Intent intent;
 
     ArrayList<String> arrayListItens = new ArrayList<>();
 
@@ -29,9 +32,9 @@ public class MainActivity2 extends AppCompatActivity {
         searchView = findViewById(R.id.searchView1);
         listView = findViewById(R.id.listView1);
 
-        arrayListItens.add("Item 1");
-        arrayListItens.add("Item 2");
-        arrayListItens.add("Item 3");
+        arrayListItens.add("Checkbox");
+        arrayListItens.add("RadioButton");
+        arrayListItens.add("Janela de Diálogo");
         arrayListItens.add("Item 4");
         arrayListItens.add("Item 5");
         arrayListItens.add("Coisa 6");
@@ -45,6 +48,29 @@ public class MainActivity2 extends AppCompatActivity {
         );
 
         listView.setAdapter(arrayAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                switch (i) {
+                    case 0:
+                        intent = new Intent(MainActivity2.this, MainActivityCheckbox.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        intent = new Intent(MainActivity2.this, MainActivityRadio.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent = new Intent(MainActivity2.this, MainActivityDialogo.class);
+                        startActivity(intent);
+                        break;
+                }
+
+
+            }
+        });
 
         searchView.setIconified(false);
         searchView.clearFocus();
@@ -68,7 +94,6 @@ public class MainActivity2 extends AppCompatActivity {
                 return false;
             }
         });
-//
     }
 
     //fazer uma busca, atualizar o arraylist
@@ -77,10 +102,9 @@ public class MainActivity2 extends AppCompatActivity {
 
         s = s.toLowerCase();
 
-        for(String item: arrayListItensCopia){
-            if(item.toLowerCase().contains(s))
+        for (String item : arrayListItensCopia) {
+            if (item.toLowerCase().contains(s))
                 arrayListItens.add(item);
         }
-
     }
 }
