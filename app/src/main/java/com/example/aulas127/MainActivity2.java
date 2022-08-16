@@ -38,6 +38,7 @@ public class MainActivity2 extends AppCompatActivity {
         arrayListItens.add("Item 4");
         arrayListItens.add("Item 5");
         arrayListItens.add("Coisa 6");
+        //TODO spinner
 
         arrayListItensCopia = new ArrayList<>(arrayListItens);
 
@@ -67,8 +68,6 @@ public class MainActivity2 extends AppCompatActivity {
                         startActivity(intent);
                         break;
                 }
-
-
             }
         });
 

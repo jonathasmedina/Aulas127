@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         edUsuario = findViewById(R.id.editTextUsuario);
         edSenha = findViewById(R.id.editTextSenha);
         btLogar = findViewById(R.id.button);
+        //TODO validar campos
 
         btLogar.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -38,7 +38,7 @@ public class MainActivityDialogo extends AppCompatActivity {
                 janela.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
+                        //TODO dar ação para este elemento
                     }
                 });
 
