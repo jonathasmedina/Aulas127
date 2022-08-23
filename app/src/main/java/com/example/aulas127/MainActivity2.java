@@ -35,7 +35,7 @@ public class MainActivity2 extends AppCompatActivity {
         arrayListItens.add("Checkbox");
         arrayListItens.add("RadioButton");
         arrayListItens.add("Janela de Diálogo");
-        arrayListItens.add("Item 4");
+        arrayListItens.add("Calculadora");
         arrayListItens.add("Item 5");
         arrayListItens.add("Coisa 6");
         //TODO spinner
@@ -65,6 +65,10 @@ public class MainActivity2 extends AppCompatActivity {
                         break;
                     case 2:
                         intent = new Intent(MainActivity2.this, MainActivityDialogo.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent = new Intent(MainActivity2.this, MainActivityCalculadora.class);
                         startActivity(intent);
                         break;
                 }
