@@ -29,6 +29,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextUsuario"
+            android:inputType="numberDecimal|numberSigned"
             android:text="ifms@ifms.edu.br"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
